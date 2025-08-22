@@ -1,6 +1,6 @@
 # ft_transcendence
 
-A modern web application featuring online Pong gameplay with real-time multiplayer capabilities, user management, and tournament systems. Final project of the 42 School web development curriculum.
+A modern web application featuring online Pong gameplay with real-time multiplayer capabilities, user management, and tournament systems. Final project of the 1337School web development curriculum.
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ ft_transcendence is a comprehensive web application that recreates the classic P
 - **Docker & Docker Compose**: Containerization
 - **Makefile**: Build automation
 - **SSL/TLS**: HTTPS encryption
-- **OAuth 2.0**: Third-party authentication (42 Intranet, Google, GitHub)
+- **OAuth 2.0**: Third-party authentication (1337Intranet, Google, GitHub)
 
 ## Requirements
 
@@ -440,7 +440,7 @@ pre-commit install
 
 ## Authors
 
-- **Youssef Lmkhantar** - *Full-stack Developer* - [YourGithub](https://github.com/ylamkhan)
+- **Youssef Lmkhantar** - *Full-stack Developer* - [MyGithub](https://github.com/ylamkhan)
 - **Zineb Saoud** - *Frontend Developer* - [GitHub](https://github.com/Simba2021)
 - **Yousra Bouzafour** - *Backend Developer* - [GitHub](https://github.com/ybouzafo)
 - **Ibrahim El Harraq** - *DevOps Engineer* - [GitHub](https://github.com/El7arraq)
