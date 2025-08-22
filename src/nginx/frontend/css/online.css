@@ -1,0 +1,133 @@
+.users {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    flex-grow: 1;
+    max-height: 350px;
+    overflow-y: auto;
+    transition: all 0.5s linear;
+}
+
+.users h3 {
+    font-size: 14px;
+    align-items: center;
+}
+
+.users::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.users::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.users li {
+    display: flex;
+    padding: 0.2rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.users li img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    position: relative;
+}
+
+.users li:hover {
+    color: #fff;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.users a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.users a span {
+    overflow: hidden;
+}
+
+.users a i {
+    font-size: 1.2rem;
+    padding-left: .15rem;
+}
+
+.gradient-overlay {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3));
+    pointer-events: none;
+}
+
+.logout {
+    /* position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: calc(100% - 60px);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: #fff; */
+    font-size: 14px;
+    /*padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; */
+    padding: 1rem;
+    /* margin: 8px 0; */
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 50%;
+    fill: #ABADC7;
+    cursor: pointer;
+}
+
+.logout i {
+    display: flex;
+    align-items: center;
+}
+
+.opened-side .logout {
+    border-radius: 8px;
+  }
+
+.opened-side .logout:hover {
+    background: linear-gradient(to right, #5623D8, #6A79FA);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.logout:hover {
+    background: linear-gradient(to right, #5623D8 , #6A79FA);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.logout svg {
+    /* font-size: 1.2rem; */
+    fill: #ABADC7;
+}
+
+.logout span {
+    overflow: hidden;
+}

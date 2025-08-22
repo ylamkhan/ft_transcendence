@@ -1,0 +1,472 @@
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.chat-container .expand-sidebar-chat {
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.5s linear;
+}
+
+.list-users {
+    flex: 0 0 25%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column; 
+    border-radius: 10px;
+}
+
+.list-users-header {
+    background: #303030;
+    color: #fff;
+    height: 6%; 
+    flex-shrink: 0; 
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list-users-ul {
+    flex: 1; 
+    overflow-y: auto; 
+    scrollbar-width: none; 
+    flex-direction: column;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.list-users-ul::-webkit-scrollbar {
+    display: none;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #303030;
+    color: #aba9bb;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toggle-btn.active {
+    background-color: #393a3d;
+    color: #ADB7BE;
+}
+
+.list-users-ul {
+    display: none;
+}
+
+.list-users-ul.active {
+    display: flex;
+}
+
+.list-users-ul::-webkit-scrollbar {
+    display: none; 
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.user-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #303030;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.user-item:hover {
+    background-color: #393a3d; 
+}
+
+.user-avatar-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-details {
+    flex: 1;
+}
+
+.user-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.message-preview {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-width: 230px;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.notification-count {
+    background-color: #5623d8;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    height: 25px;
+    width: 25px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.room-conversions {
+    display: flex;
+    height: 100%;
+    flex: 0 0 75%;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    background: #303030;
+}
+
+.empty-conversation {
+    width: 100%;
+    height: 100%;
+    background: url('../../images/chat-gif2.gif') no-repeat center center;
+    background-size: 50%;
+}
+
+/* Chat Header Styling */
+.chat-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #393a3d;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.header-details {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1; */
+}
+
+.header-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.header-status {
+    font-size: 12px;
+}
+
+.header-status.online {
+    color: #7bd97b;
+}
+
+.header-status.offline {
+    color: #e41526;
+}
+
+.conversation-area {
+    background-color: #303030;
+    width: 100%;
+    height: calc(100% - 80px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.message.incoming {
+    flex-direction: row;
+}
+
+.message.outgoing {
+    flex-direction: row-reverse;
+}
+
+.message-text {
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    word-wrap: break-word;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.message-text p {
+    margin: 0;
+}
+
+.message-text.outgoing {
+    background-color: #5623d8;
+}
+
+.message-text.incoming {
+    background-color: #393a3d;
+}
+
+.message .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.message-input-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.message-input {
+    background-color: #393a3d;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    resize: none;
+    overflow-y: auto; 
+    overflow-y: scroll; 
+    scrollbar-width: none;
+    margin-right: 0.5rem;
+    color: #fff;
+}
+
+.list-users::-webkit-scrollbar {
+    display: none; 
+}
+
+.chat-buttons {
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.emoji-btn {
+    background: linear-gradient(to right, #5623D8, #6A79FA); 
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.emoji-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #e0e0e0;
+    transition: fill 0.3s ease;
+}
+
+.emoji-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.emoji-btn:hover svg {
+    fill: #ffff;
+}
+
+.emoji-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.emoji-list {
+    position: fixed;
+    right: 55px;
+    bottom: 106px;
+    display: none;
+    background-color: #393a3d;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    height: 300px;
+    width: 300px;
+}
+
+.emoji {
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.emoji:hover {
+    background-color: #f0f0f0;
+}
+
+.send-btn {
+    background: linear-gradient(to right, #5623D8, #6A79FA);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white; 
+    transition: fill 0.3s ease; 
+}
+
+.send-btn:hover {
+    background-color: #6A79FA; 
+}
+
+.send-btn:hover svg {
+    fill: #ffff; 
+}
+
+.chat-header .menu-icon {
+    position: absolute;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+.dropdown-item {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+

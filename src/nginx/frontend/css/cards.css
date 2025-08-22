@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+.select-mode {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-level {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  margin: 10px 0;
+  transition: ease all 2.3s;
+  perspective: 1200px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card-level:hover .cover:after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.cover:before {
+  content: '';
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all 2.3s;
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+  border-radius: 10px;
+}
+
+.cover:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.cover.item-a {
+  background-image: url('../images/robot.jpeg');
+}
+
+.cover.item-b {
+  background-image: url('../images/wifi.jpeg');
+}
+
+.cover.item-c {
+  background-image: url('../images/local.jpeg');
+}
+
+.cover.item-d {
+  background-image: url('../images/friend.jpeg');
+}
+
+.cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all 2.3s;
+  z-index: 3;
+  font-size: calc(1.2em + 1.5vw);
+}
+
+@media (max-width: 1200px) {
+  .col-md-3 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 2%;
+  }
+  .cover h1 {
+    font-size: calc(1.1em + 1.3vw);
+  }
+}
+
+@media (max-width: 992px) {
+  .col-md-3 {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .cover h1 {
+    font-size: calc(1em + 1.1vw);
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-6 {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .cover h1 {
+    font-size: calc(0.9em + 1vw);
+  }
+}
+
+@media (max-width: 576px) {
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .cover h1 {
+    font-size: calc(0.8em + 0.9vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .cover h1 {
+    font-size: calc(0.8em + 2vw);
+  }
+}
+

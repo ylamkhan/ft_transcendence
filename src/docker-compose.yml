@@ -1,0 +1,100 @@
+# version: '3.8'
+
+services:
+    db:
+        container_name: postgres
+        hostname: postgres
+        image: postgres
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+        env_file:
+            - .env
+        networks:
+            - transcendence-network
+        # volumes:
+        #     - ./data/db:/var/lib/postgresql/data
+
+    redis:
+        container_name: redis
+        image: redis:latest
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+        hostname: redis
+        ports:
+            - "6380:6379"  # Exposes Redis on port 6379
+        networks:
+            - transcendence-network
+        volumes:
+            - redis_data:/data  # Optional: Persist Redis data
+
+    adminer:
+        container_name: adminer
+        image: adminer:latest
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+        hostname: adminer
+        ports:
+            - "8081:8080"  # Adminer available at http://localhost:8081
+        networks:
+            - transcendence-network
+        depends_on:
+            - db  # Ensures Adminer starts after the database
+
+    ngnix:
+        depends_on:
+            - web
+        container_name: ngnix
+        build: ./nginx/
+        image: ngnix
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+        ports:
+            - 8080:443
+        restart: on-failure
+        env_file: .env
+        networks:
+            - transcendence-network
+        volumes:
+            - ./nginx/frontend/:/var/www/html/
+            - media:/var/www/html/static
+
+    web:
+        container_name: backend
+        build: ./backend/
+        image: backend
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "3"
+        # ports:
+        #     - 8000:8000
+        env_file:
+            - .env
+        networks:
+            - transcendence-network
+        volumes:
+            - ./backend/src/:/code/
+            - media:/code/static
+        depends_on:
+            - redis  # Ensures web service waits for Redis to start
+
+networks:
+    transcendence-network:
+        name: transcendence-network
+
+volumes:
+    media:
+    redis_data:  # Volume for persisting Redis data

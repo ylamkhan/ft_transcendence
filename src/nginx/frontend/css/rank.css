@@ -1,0 +1,140 @@
+.wrapper {
+    border-radius: 10px;
+    background: #727272;
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.rank {
+    background: #252629;
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.skew {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.skew::before {
+    content: '';
+    position: absolute;
+    left: 8rem;
+    top: 30%;
+    transform: translateY(-50%) rotate(10deg);
+    background: #252629;
+    width: 30%;
+    height: 200%;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    gap: 10px;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: transparent;
+    margin: 0 0 40px 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-img img {
+    width: 3rem;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-top: 5px;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 0;
+    gap: 2px;
+    color: #727272;
+    cursor: pointer;
+}
+
+.full-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 15px 0 0 0;
+}
+
+.user-name {
+    color: gray;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media (max-width: 1400px) {
+    .skew::before {
+        left: 7rem;
+        transform: translateY(-50%) rotate(10deg);
+        width: 50%;
+        height: 140%;
+    }
+}
+@media (max-width: 991px) {
+    .skew::before {
+        left: 6rem;
+        transform: translateY(-50%) rotate(10deg);
+        width: 50%;
+        height: 140%;
+    }
+}
+
+@media (max-width: 600px) {
+    .skew::before {
+        left: 1rem;
+        transform: translateY(-50%) rotate(5deg);
+        width: 50%;
+        height: 140%;
+    }
+    .rank {
+        width: 30%;
+    }
+    .main-title {
+        font-size: 1.2rem;
+        padding-top: 10px;
+    }
+
+    .full-name {
+        font-size: 1rem;
+    }
+
+    .user-name {
+        font-size: 12px;
+    }
+}

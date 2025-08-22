@@ -1,0 +1,180 @@
+@media (max-width: 1300px) {
+    .room-conversions {
+        flex: 0 0 75%;
+    }
+
+    .message-preview {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 1068px) and (min-width: 990px) {
+    .room-conversions {
+        flex: 0 0 73%;
+    }
+}
+
+@media (max-width: 992px) {
+    .room-conversions {
+        flex: 0 0 75%;
+    }
+}
+
+@media (max-width: 968px) {
+    .room-conversions {
+        flex: 0 0 74%;
+    }
+}
+
+@media (max-width: 918px) {
+    .room-conversions {
+        flex: 0 0 73%;
+    }
+}
+
+@media (max-width: 860px) {
+    .room-conversions {
+        flex: 0 0 72%;
+    }
+}
+
+@media (max-width: 830px) {
+    .room-conversions {
+        flex: 0 0 71%;
+    }
+}
+
+@media (max-width: 812px) {
+    .room-conversions {
+        flex: 0 0 70%;
+    }
+}
+
+@media (max-width: 782px) {
+    .room-conversions {
+        flex: 0 0 69%;
+    }
+}
+
+@media (max-width: 752px) {
+    .room-conversions {
+        flex: 0 0 67%;
+    }
+}
+
+@media (max-width: 722px) {
+    .room-conversions {
+        flex: 0 0 65%;
+    }
+}
+
+@media (max-width: 692px) {
+    .room-conversions {
+        flex: 0 0 63%;
+    }
+}
+
+@media (max-width: 662px) {
+    .room-conversions {
+        flex: 0 0 61%;
+    }
+}
+
+@media (max-width: 632px) {
+    .room-conversions {
+        flex: 0 0 69%;
+    }
+
+    .message-preview {
+        max-width: 50px;
+    }
+}
+
+@media (max-width: 602px) {
+    .room-conversions {
+        display: none;
+        flex: 0 0 100%;
+    }
+
+    .room-conversions.display_flex {
+        display: flex;
+    }
+
+    .list-users {
+        flex: 0 0 100%; 
+        padding: 10px;
+    }
+
+    /* .message-preview {
+        max-width: 100px;
+    } */
+    /* .room-conversions {
+        flex: 0 0 50%;
+    } */
+}
+
+/* @media (max-width: 572px) {
+    .room-conversions {
+        flex: 0 0 51%;
+    }
+}
+
+@media (max-width: 542px) {
+    .room-conversions {
+        flex: 0 0 55%;
+    }
+} */
+
+@media (max-width: 512px) {
+    .room-conversions {
+        display: none;
+        flex: 0 0 100%;
+    }
+
+    .room-conversions.display_flex {
+        display: flex;
+    }
+
+    .list-users {
+        flex: 0 0 100%; 
+        padding: 10px;
+    }
+
+    .message-preview {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 290px) {
+
+    .list-users {
+        flex: 0 0 100%; 
+        padding: 10px;
+    }
+
+    .user-name {
+        font-size: 10px;
+    }
+
+    .message-preview {
+        max-width: 50px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 230px) {
+
+    .list-users {
+        flex: 0 0 80%; 
+        padding: 10px;
+    }
+
+    .user-name {
+        font-size: 8px;
+    }
+
+    .message-preview {
+        max-width: 10px;
+        font-size: 6px;
+    }
+}

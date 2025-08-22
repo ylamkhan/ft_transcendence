@@ -1,0 +1,124 @@
+<div class="bd_setting container-fluid">
+    <ul class="nav nav-tabs-simul  mb-4" id="settingsTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="account-tab" data-bs-toggle="tab" data-bs-target="#account-section"
+                type="button" role="tab" aria-controls="account-section" aria-selected="true">
+                <i class="fas fa-user"></i> Account
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="security-tab" data-bs-toggle="tab" data-bs-target="#security-section"
+                type="button" role="tab" aria-controls="security-section" aria-selected="false">
+                <i class="fas fa-shield-alt"></i> Security
+            </button>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="account-section" role="tabpanel" aria-labelledby="account-tab">
+            <div class="section-setting active">
+                <div class="d-flexe justify-content-between align-items-center flex-wrap">
+                    <div class="d-flex align-items-center">
+                        <img id="photo" src="" alt="Profile Image" class="profile-image-setting me-3">
+                        <div class="profile-info">
+                            <h2 id="username">Username</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="file" id="fileInput" style="display: none;" accept="image/*">
+                        <button class="update-image-button-setting" id="uploadBtn">Upload new picture</button>
+                    </div>
+                </div>
+                <hr style="border: 0; border-top: 2px solid rgba(255, 255, 255, .2);" class="my-4">
+
+                <form id="set_form" class="setting-form">
+                    <div class="row g-3">
+                        <div class="col-md-6-set">
+                            <label for="first-name" class="form-label">First name</label>
+                            <input id="first-name" type="text" class="form-control-simul" placeholder="First name">
+                        </div>
+                        <div class="col-md-6-set">
+                            <label for="last-name" class="form-label">Last name</label>
+                            <input id="last-name" type="text" class="form-control-simul" placeholder="Last name">
+                        </div>
+                        <div class="col-md-6-set">
+                            <label for="location" class="form-label">Country</label>
+                            <select id="country" class="form-select-simul"></select>
+                        </div>
+                        <div class="col-md-6-set">
+                            <label for="birthday" class="form-label">Date of Birth</label>
+                            <input id="birthday" type="date" class="form-control-simul">
+                        </div>
+                        <div class="col-12">
+                            <label for="about" class="form-label">About</label>
+                            <textarea id="about" rows="4" maxlength="150" class="form-control-simul"
+                                placeholder="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia"></textarea>
+                            <p class="brief"> Brief information about you to display on profile (max: 80 characters).
+                            </p>
+                        </div>
+                    </div>
+                    <div class="success" id="result1" class="text-danger mt-2"></div>
+                </form>
+                <button type="submit" id="save_set" class="submit_button_setting btn btn-primary mt-2">Save
+                    Changes</button>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="security-section" role="tabpanel" aria-labelledby="security-tab">
+            <div class="resp_pass">
+                <div class="row align-items-stretch">
+                    <div class="col-md-5">
+                        <form id="password-change-form">
+                            <div class="change-password">
+                                <h2>Change password</h2>
+                                <p class="p_change">Use a strong Password for more security</p>
+                                <div class="input-group-setting">
+                                    <label>Current Password</label><br>
+                                    <input type="password" id="old_password" name="old_password"
+                                        class="form-control-simul" placeholder="**********">
+                                    <p class="never"> Never share your password with anyone.</p>
+                                </div>
+                                <div class="input-group-setting">
+                                    <label>New Password</label><br>
+                                    <input type="password" id="new_password1" name="new_password1"
+                                        class="form-control-simul" placeholder="**********">
+                                </div>
+                                <div class="input-group-setting">
+                                    <label>Repeat New Password</label><br>
+                                    <input type="password" id="new_password2" name="new_password2"
+                                        class="form-control-simul" placeholder="**********">
+                                </div>
+                                <div id="result1"></div>
+                                <div id="result_pass" class="text-danger mt-2"></div>
+                            </div>
+                        </form>
+                        <button type="submit" id="save_set_pass" style="left:0;"
+                            class="submit_button_setting btn btn-primary mt-2">Save Changes</button>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-center justify-content-center">
+                        <div style=" height: 100%; width: 1px;" class="vertical-line"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="two-factor-auth">
+                            <h2>Two-factor authentication</h2>
+                            <div class="paragraphs">
+                                <p class="p1">Secure your account</p>
+                            </div>
+                            <div class="text-and-button">
+                                <p class="p2">Enable two-factor authentication to add an extra layer of security</p>
+                                <button class="enable-2fa-btn">Enable 2FA</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="alertBox" class="alert">
+    <span class="alert-icon">✅</span>
+    <span class="alert-message">Profile updated successfully! </span>
+    <span class="alert-close" id="close_btn">✖</span>
+</div>

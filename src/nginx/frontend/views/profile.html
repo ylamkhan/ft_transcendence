@@ -1,0 +1,159 @@
+<div class="prof-container">
+    <div class="row">
+        <div class="col-left">
+            <div class="prof-header">
+                <div class="header-content">
+                    <div class="menu-icon">
+                        <button class="menu-btn">
+                            <img src="../images/dots-vertical-rounded-regular-24.png" alt="">
+                        </button>
+                        <div class="dropdown-menu hidden">
+                            <button class="dropdown-item" id="show-blocked">Show Blocked Users</button>
+                            <button class="dropdown-item" id="add-new">Add New Users</button>
+                            <button class="dropdown-item" id="show-requests">Show requests</button>
+                            <button class="dropdown-item" id="show-friends">Show friends</button>
+                            <button class="dropdown-item" id="change-nickname">change-nickname</button>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-level-wrapper">
+                        <div class="profile-section">
+                            <div class="profile-content">
+                                <img id="pr-img" src="../images/avatars/avatar1.png" alt="Profile Picture" class="profile-img" />
+                                <div class="profile-text">
+                                    <h2 id="username">Jhon Anderson!</h2>
+                                    <p id="country_select"></p>
+                                    <p id="bio-pro">Biography here write what you want here</p>
+                                </div>
+                            </div>
+                            <div style="display: none;" class="prof-buttons">
+                                <button class="add-friend-btn">Connect</button>
+                                <button class="block-friend-btn">Block</button>
+                            </div>
+                        </div>
+
+                        <div class="level-section">
+                            <div class="progress-container">
+                                <canvas id="progressCanvas" width="150" height="150"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="level-growth-info">
+                        <div class="prof-draws">
+                            <h4 id="draws-rate">50%</h4>
+                            <p>Drawing Rate</p>
+                            <div class="growth-bar">
+                                <div class="growth-bar-fill" id="draw-bar"></div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="prof-loses">
+                            <h4 id="loses-rate">25%</h4>
+                            <p>Losing Rate</p>
+                            <div class="growth-bar">
+                                <div class="growth-bar-fill" id="lose-bar"></div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="prof-wins">
+                            <h4 id="wins-rate">25%</h4>
+                            <p>Winning Rate</p>
+                            <div class="growth-bar">
+                                <div class="growth-bar-fill" id="win-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+          
+            <div class="sub-row" style="display: flex;">
+                <div class="sub-col-left" style="flex: 1;">
+                    <div class="matches-history" style="display:block;">
+                        <h1>
+                            Match History
+                        </h1>
+                        <div class="games-header">
+                            <button id="pingpong-header" class="toggle-btn active">Ping Pong</button>
+                            <button id="tictactoe-header" class="toggle-btn">Tic-Tac-Toe</button>
+                        </div>
+                        <!-- <div class="filter-options">
+                            <div id="tictactoe-header" class="game-filter-header" onclick="filterHistory('tictactoe')">Tic-Tac-Toe</div>
+                            <div id="pingpong-header" class="game-filter-header" onclick="filterHistory('pingpong')">Ping Pong</div>
+                        </div> -->
+                        <ol class="tournament-list ponotoonehistory">
+                        </ol>
+                        <ol class="tournament-list tonotoonehistory d-none">
+                        </ol>
+                    </div>
+                </div>
+                <div class="sub-col-center" style="flex: 1;">
+                    <div class="tournaments-history" style="display:block;">
+                        <h1>
+                            Tournament Timeline
+                        </h1>
+                        <ol class="tournament-list tournamenthistory">
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="sub-col-right" style="flex: 1;">
+                    <div class="achievements-history" style="display: block;">
+                        <h1>Achievements</h1>
+                        <ol class="achievements-list achievements">
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achiev-icons">
+                                    <img src="../images/avatars/avatar1.png" alt="Achievement Icon" class="achievement-icon" />
+                                    <span class="achievement-title">Achievement1</span>
+                                </div>
+                            </li>
+                        </ol>                                              
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+  

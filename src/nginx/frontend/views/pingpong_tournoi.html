@@ -1,0 +1,181 @@
+<div class="ping-start-tourn">
+    <div class="tournament-mode" >
+        <h2>CHOOSE TOURNAMENT MODE</h2>
+        <div class="mode-options">
+            <button id="local-mode-btn" class="mode-btn">
+                Local Tournament
+            </button>
+            <button id="remote-mode-btn" class="mode-btn">
+                Remote Tournament
+            </button>
+        </div>
+    </div>
+
+    <div id="remote-tournament-options" style="display:none;" class="remote-options">
+        <h2>REMOTE TOURNAMENT OPTIONS</h2>
+        <div class="mode-options">
+            <button id="joinTournamentBtn" class="mode-btn">Join Existing Tournament</button>
+            <button id="createTournamentBtn" class="mode-btn">Create New Tournament</button>
+        </div>
+    </div>
+
+    <div class="existing-tournaments-list" style="display:none;">
+        <h1>
+            <span class="list-trophy-icon">
+              <img src="../../images/trophy.svg" alt="Trophy">
+            </span>
+            List Of Tournaments
+          </h1>
+        <ol id="tournament-list">
+            <li>tournament1</li>
+            <li>tournament2</li>
+            <li>tournament3</li>
+            <li>tournament4</li>
+            <li>tournament5</li>
+            <li>tournament6</li>
+            <li>tournament7</li>
+            <li>tournament8</li>
+            <li>tournament9</li>
+            <li>tournament10</li>
+        </ol>
+    </div>
+
+    <div class="createTourn" style="display:none;" id="create-tournament-section-remote">
+        <h2>CREATE TOURNAMENT REMOTE<img src="images/trophy.svg" alt="tournament-icon"></h2>
+        <div class="row1">
+            <input type="text" id="tournament-name" placeholder="Enter tournament name">
+            <button id="start-tournament-btn">
+                <img src="images/add.svg" alt="Add">
+            </button>
+        </div>
+    </div>
+
+    <div class="createTourn" style="display:none;" id="create-tournament-section">
+        <h2>CREATE TOURNAMENT <img src="images/trophy.svg" alt="tournament-icon"></h2>
+        <div class="row1">
+            <input type="text" id="tournament-name" placeholder="Enter tournament name">
+            <button id="start-tournament-btn">
+                <img src="images/add.svg" alt="Add">
+            </button>
+        </div>
+    </div>
+
+    <!-- Participants List -->
+    <div class="add-list" id="participants-section" style="display:none;">
+        <h2>LIST OF PARTICIPANTS <img src="images/partic.png" alt="partic"></h2>
+        <div class="row1">
+            <input type="text" id="input-box" placeholder="Add a participant">
+            <button id="add-btn">
+                <img src="images/add.svg" alt="Add">
+            </button>
+        </div>
+        <ul id="list-container"></ul>
+    </div>
+
+    <!-- Waiting Section -->
+    <div class="waiting-section" id="waiting-section" style="display:none;">
+        <h2>Waiting for Players to Join...</h2>
+        <div id="waiting-players">
+            <!-- Player profiles will be dynamically added here -->
+        </div>
+        <button id="invite-button" class="btn btn-primary">Invite a Friend</button>
+    </div>    
+
+    <!-- Tournament Schema cheeeeeeeeeeeeeeeeeeeeeekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk-->
+    <div class="parent-container" style="display: none;">
+        <div class="shema">
+            <div class="tournament-container">
+                <div class="title-tourn">
+                    <h1 class="title">TOURNAMENT</h1>
+                </div>
+                <div class="winner-name-div">
+                    <div class="trophy">
+                        <span><img src="../images/trophy-icon.svg" alt=""></span>
+                    </div>
+                    <div class="winner-name">
+                        <span>
+                            Winner is unknown
+                        </span>
+                    </div>
+                </div>
+                <div class="shema-body">
+                    <div class="row row11">
+                        <div class="case-btn case-left"></div>
+                        <div class="case-btn case-right"></div>
+                    </div>
+        
+                    <div class="row final-row">
+                        <div class="case-btn finalist-left"></div>
+                        <div class="case-btn finalist-right"></div>
+                    </div>
+        
+                    <div class="row row12">
+                        <div class="case-btn case-left"></div>
+                        <div class="case-btn case-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Match Section -->
+    <div class="match" style="display:none;"></div>
+    <div class="wait">
+        <div class="player_user">
+            <span id="player1">
+            </span>
+        </div>
+        <div class="opponent_user">
+           <span id="waiting_status">
+           </span>
+        </div>
+    </div>
+</div>
+
+<!-- Winner Content -->
+<div class="winner-content" style="display:none;">
+    <div class="winner-trophy">
+        <img src="https://i.ibb.co/kVZ3CN6/trophy.png" alt="trophy">
+    </div>
+    <div class="winner-text">
+        <h1 id="award">Award</h1>
+    </div>
+</div>
+
+<!-- Match Result -->
+<div class="match-result" id="match-result" style="display:none;">
+    <div class="result-content">
+        <h2 id="match-result-message"></h2>
+        <p>Waiting for the next match...</p>
+    </div>
+</div>
+
+<!-- Scoreboard -->
+<div class="scoreboard" id='scoreboard1'>
+    <div class="opponent1">
+        <img id="opn1p" src="images/poke.jpeg" alt="rank1">
+        <div class="opn">
+            <span id="opn1"></span>
+            <span id="scores1">Score: 0</span>
+        </div>
+    </div>
+    <div class="between">
+        <span id="vs">VS</span>
+        <span id="chrono">00:00</span>
+    </div>
+    <div class="opponent2">
+        <div class="opn">
+            <span id="opn2"></span>
+            <span id="scores2">Score: 0</span>
+        </div>
+        <img id="opn2p" src="images/pp.jpeg" alt="rank1">
+    </div>
+</div>
+<!-- Game Canvas -->
+<div id='finalResultOverlay'>
+    <div id='finalResult'>
+        <h2 id="resultText"></h2>
+        <button class="leaveGameButton" id="leaveGameButton"></button>
+    </div>
+</div>
+<div id='gameCanvas' class="gameCanvas2"></div>

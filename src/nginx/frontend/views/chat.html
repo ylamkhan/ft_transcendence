@@ -1,0 +1,99 @@
+<div class="chat-container">
+    <div class="expand-sidebar-chat d-none">
+        <img src="../images/menu-icons/expand_left.svg" alt="expand-sidebar">
+    </div>
+    <div class="list-users">
+        <div class="list-users-header">
+            <button id="chats-tab" class="toggle-btn active">Chats</button>
+            <button id="friends-tab" class="toggle-btn">Friends</button>
+        </div>
+        <ul id="friends-content" class="list-users-ul">
+        </ul>
+        <ul id="chats-content" class="list-users-ul active">
+        </ul>
+    </div>
+    
+    <div class="room-conversions">
+        <div class="empty-conversation">
+
+        </div>
+        <div class="chat-header d-none">
+            <img class="header-avatar" src="../images/avatars/avatar1.png" alt="User Avatar">
+            <div class="header-details">
+                <h3 class="header-name">User 1</h3>
+                <span class="header-status">Online</span>
+            </div>
+            <div class="menu-icon">
+                <button class="menu-btn">
+                    <img src="../images/dots-vertical-rounded-regular-24.png" alt="">
+                </button>
+                <div class="dropdown-menu hidden">
+                    <button class="dropdown-item block-user" id="show-blocked">Block User</button>
+                    <button class="dropdown-item invite-user" id="invite-user">Invite User</button>
+                </div>
+            </div>
+        </div>
+        <div class="conversation-area d-none">
+            <div class="messages" id="messages">
+            </div>
+        
+            <div class="message-input-area">
+                <textarea class="message-input" id="messageInput" placeholder="Type your message..."></textarea>
+                <div class="chat-buttons">
+                    <button class="emoji-btn" id="emojiButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10ZM8.5 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm7 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm-7.902 4.18a.75.75 0 0 0-.036 1.06 6.5 6.5 0 0 0 9.882-.002.75.75 0 1 0-1.097-1.023 5 5 0 0 1-7.688.002.75.75 0 0 0-1.06-.037Z"/>
+                        </svg>
+                    </button>
+                    <button class="send-btn" id="sendButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path d="M2.5 12L21.5 2 14.5 12l7 10-19-10Z"></path>
+                        </svg>
+                    </button>                                              
+                    <div class="emoji-list" id="emojiList">
+                        <span class="emoji" data-emoji="😊">😊</span>
+                        <span class="emoji" data-emoji="😂">😂</span>
+                        <span class="emoji" data-emoji="❤️">❤️</span>
+                        <span class="emoji" data-emoji="😍">😍</span>
+                        <span class="emoji" data-emoji="🤣">🤣</span>
+                        <span class="emoji" data-emoji="😎">😎</span>
+                        <span class="emoji" data-emoji="🥺">🥺</span>
+                        <span class="emoji" data-emoji="😭">😭</span>
+                        <span class="emoji" data-emoji="👍">👍</span>
+                        <span class="emoji" data-emoji="👎">👎</span>
+                        <span class="emoji" data-emoji="🎉">🎉</span>
+                        <span class="emoji" data-emoji="😜">😜</span>
+                        <span class="emoji" data-emoji="🤔">🤔</span>
+                        <span class="emoji" data-emoji="😢">😢</span>
+                        <span class="emoji" data-emoji="😡">😡</span>
+                        <span class="emoji" data-emoji="😱">😱</span>
+                        <span class="emoji" data-emoji="😇">😇</span>
+                        <span class="emoji" data-emoji="🥳">🥳</span>
+                        <span class="emoji" data-emoji="🤩">🤩</span>
+                        <span class="emoji" data-emoji="😴">😴</span>
+                        <span class="emoji" data-emoji="😬">😬</span>
+                        <span class="emoji" data-emoji="💪">💪</span>
+                        <span class="emoji" data-emoji="🙌">🙌</span>
+                        <span class="emoji" data-emoji="🔥">🔥</span>
+                        <span class="emoji" data-emoji="✨">✨</span>
+                        <span class="emoji" data-emoji="💯">💯</span>
+                        <span class="emoji" data-emoji="🤗">🤗</span>
+                        <span class="emoji" data-emoji="💔">💔</span>
+                        <span class="emoji" data-emoji="🫶">🫶</span>
+                        <span class="emoji" data-emoji="😋">😋</span>
+                        <span class="emoji" data-emoji="🤭">🤭</span>
+                        <span class="emoji" data-emoji="🤑">🤑</span>
+                        <span class="emoji" data-emoji="👀">👀</span>
+                        <span class="emoji" data-emoji="🙏">🙏</span>
+                        <span class="emoji" data-emoji="🎂">🎂</span>
+                        <span class="emoji" data-emoji="😅">😅</span>
+                        <span class="emoji" data-emoji="😉">😉</span>
+                        <span class="emoji" data-emoji="🌹">🌹</span>
+                        <span class="emoji" data-emoji="🐶">🐶</span>
+                        <span class="emoji" data-emoji="🎶">🎶</span>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

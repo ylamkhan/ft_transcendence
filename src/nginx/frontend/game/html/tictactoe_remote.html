@@ -1,0 +1,63 @@
+<div class="tic-local-wrapper">
+    <h1 class="title-tic">Tic Tac Toe</h1>
+    
+    <div class="container-tic-local">
+
+        <div class="wining_number">
+            <div class="o_wins">'O' Wins: <span id="o_wins_count">0</span> times</div>
+            <div class="x_wins">'X' Wins: <span id="x_wins_count">0</span> times</div>
+        </div>
+
+        <div class="starting_page">
+            <h4>THE FIRST PLAYER WILL PLAY WITH X</h4>
+            <div class="button">
+                <button class="playremote" id="playremote">Play</button>
+            </div>
+        </div>
+
+        <div class="wait">
+            <div class="player_user">
+                <span id="player">
+                </span>
+            </div>
+            <div class="opponent_user">
+               <span id="waiting_status">
+               </span>
+            </div>
+        </div>
+
+        <div class="main_page">
+            <div class="board">
+                <div class="timer"></div>
+                <div class="turn_btn">
+                    <button class="x_turn">X Turn</button>
+                    <button class="o_turn">O Turn</button>
+                    <div class="showChange"></div>
+                </div>
+
+                <div class="btns">
+                    <div class="btn" id="1" onclick="func(1)"></div>
+                    <div class="btn" id="2" onclick="func(2)"></div>
+                    <div class="btn" id="3" onclick="func(3)"></div>
+                    <div class="btn" id="4" onclick="func(4)"></div>
+                    <div class="btn" id="5" onclick="func(5)"></div>
+                    <div class="btn" id="6" onclick="func(6)"></div>
+                    <div class="btn" id="7" onclick="func(7)"></div>
+                    <div class="btn" id="8" onclick="func(8)"></div>
+                    <div class="btn" id="9" onclick="func(9)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="winner_page">
+            <h2 class="winnerName"></h2>
+            <div class="button">
+                <button class="playAgainBtn">Play Again</button>
+            </div>
+            <div class="button">
+                <button id="leaveGameButton" class="playAgainBtn">Leave Game</button>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,42 @@
+/* Overlay style */
+#finalResultOverlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it's in the foreground */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the result content */
+#finalResult {
+    width: 50%;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.leaveGameButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.leaveGameButton:hover, #leaveGameButton:hover {
+    background: linear-gradient(to right, #5623D8, #6A79FA);
+
+}

@@ -1,0 +1,226 @@
+.card-container {
+    background: #1E1F22;
+    /* padding: 2rem; */
+    border-radius: 10px;
+    padding-bottom: 0;
+}
+
+.games {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+}
+
+.game {
+    min-width: calc(25% - 1rem); /* Each game will take up roughly a quarter of the width minus the gap */
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+    height: 200px; /* Set a height for each game card */
+    border-radius: 10px; /* Add some rounding for aesthetics */
+}
+
+.main-title {
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.game {
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: calc(25% - 1rem); 
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.pingpong1 {
+    background-image: url("./../images/ping.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.tictactoe1 {
+    background-image: url("./../images/tictic.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.rock1 {
+    background-image: url("./../images/rock.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.hockey {
+    background-image: url("./../images/hockey.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.billiard {
+    background-image: url("./../images/billiard.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.chess {
+    background-image: url("./../images/chess.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.bowling {
+    background-image: url("./../images/bowling.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.parchisi {
+    background-image: url("./../images/parchisi.webp");
+    background-size: cover;
+    background-position: center; 
+}
+
+.game:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    color: #fff;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: purple;
+}
+
+.card-details {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media only screen and (max-width: 992px) {
+    .game {
+      width: calc(100% - 1rem);
+    }
+  }
+
+
+
+#gameCanvas {
+    width: 100%; /* Full width */
+    height: auto; /* Adjust height automatically based on aspect ratio */
+    position: relative; /* To allow canvas to fit properly */
+}
+
+canvas {
+    display: block; /* Remove inline-block margin */
+    width: 100%; /* Full width for the canvas */
+    height: auto; /* Automatically maintain aspect ratio */
+}
+
+
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Segoe UI, Helvetica, Ubuntu, sans-serif;
+    color: white;
+    gap: 1rem;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+#scores {
+    font-size: 600%;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+#title {
+    background-color: white;
+    color: black;
+}
+
+.opponent1, .opponent2 {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.opponent1 {
+    justify-content: flex-start;
+}
+
+.opponent2 {
+    justify-content: flex-end;
+    margin-right: 10px;
+    flex-direction: row-reverse;
+}
+
+.opponent2 .opn {
+    order: 1;
+    margin-right: 0.5em;
+}
+
+.opponent1 img, .opponent2 img {
+    width: 3.0rem;
+    height: 3.0rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: .5em;
+}
+
+.between {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.between span:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.between span:last-child {
+    color: #ccc;
+}
+
+#chrono {
+    font-size: 1.rem;
+    color: #fff;
+}
+
+.opn {
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #f1f1f1;
+}
+
+.opn span:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
+
+.opn span:last-child {
+    color: #ccc;
+    font-size: 16px;
+}
+

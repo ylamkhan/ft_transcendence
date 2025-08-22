@@ -1,0 +1,137 @@
+/* Base styles for the sidebar */
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 100%;
+  padding: 1.7rem;
+  color: #fff;
+  overflow: hidden;
+  transition: all 0.5s linear;
+  background: #303030;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.opened-side {
+  width: 240px;
+}
+
+.opened-side .menu li {
+  border-radius: 8px;
+}
+
+.opened-side .menu li.active {
+  background: linear-gradient(to right, #5623D8, #6A79FA);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.menu {
+  /* margin-top: 110px; */
+  list-style: none;
+  padding: 0;
+  /* flex-grow: 1; */
+}
+
+.menu li {
+  padding: 1rem;
+  margin: 8px 0;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 50%;
+  fill: #ABADC7;
+  cursor: pointer;
+}
+
+
+
+.menu li:hover {
+  background: linear-gradient(to right, #5623D8, #6A79FA);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.menu li.active {
+  background: linear-gradient(to right, #5623D8, #6A79FA);
+  border-radius: 1000px;
+  color: #fff;
+}
+
+.menu li.active svg {
+  fill: white;
+}
+
+.menu i {
+  display: flex;
+  align-items: center;
+}
+
+.menu span {
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.sidebar .expand-sidebar {
+  position: fixed;
+  display: flex;
+  /* padding-top: 95px; */
+  padding-left: 75px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+.opened-side .expand-sidebar {
+  position: fixed;
+  display: flex;
+  /* padding-top: 95px; */
+  padding-left: 205px;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+
+/* Responsive styles for 1600x900 screen resolution */
+@media (min-width: 991px) and (max-height: 900px) {
+  /* .sidebar {
+      width: 110px;
+  }
+
+  .sidebar:hover {
+      width: 200px;
+  }
+
+  .users {
+    margin: 25px 0 50px 0;
+  }
+
+  .menu li {
+    padding: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 0;
+  }
+
+  .menu a {
+      font-size: 10px;
+  }
+
+  .menu a i {
+      font-size: 1.1rem;
+      padding-left: 5px;
+  } */
+}
+
+/* Further responsive styles */
+@media (max-width: 991.98px) {
+  .sidebar, .light, .user-badge {
+    display: none !important;
+  }
+
+}

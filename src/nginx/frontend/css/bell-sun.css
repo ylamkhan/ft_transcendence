@@ -1,0 +1,112 @@
+.notification, .light {
+    position: relative;
+    margin-right: 5px;
+    background: #393A3D;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.notification i, .light i {
+    font-size: 18px;
+    padding: 5px;
+    color: #ABADC7;
+}
+
+.light .badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #ABADC7;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 3px 3px;
+    font-size: 12px;
+    transform: translate(50%, -50%);
+}
+
+
+.navbar {
+    background-color: #252629;
+    height: 80px;
+    padding: 0;
+}
+
+.offcanvas-title {
+    color: #6A79FA;
+}
+
+.navbar-brand {
+    font-weight: 500;
+    color: #6A79FA;
+    font-size: 24px;
+    transition: 0.3s color;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.25rem;
+    background-color: #393A3D;
+    color: #fff !important;
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #ABADC7;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff !important;
+    background: #6A79FA;
+    border-radius: 8px;
+}
+
+.user-badge {
+    background-color: #393A3D;
+    margin-right: 20px;
+  }
+
+@media (max-width: 991.98px) {
+    .notification {
+        position: absolute;
+        right: 50px;
+      }
+}
+
+@media (max-width: 480px) {
+    .notification {
+      position: absolute;
+      right: 45px;
+      height: 30px;
+      width: 30px;
+    }
+  
+    .notification img {
+      width: 15px;
+      height: 15px;
+    }
+  
+    .navbar-toggler {
+      position: absolute;
+      right: 15px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        width: 15px;
+        height: 15px;
+    }
+  }
+
